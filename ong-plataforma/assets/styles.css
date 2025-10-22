@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+header { background: #2d6a4f; color: #fff; padding: 1rem; text-align: center; }
+nav ul { list-style: none; display: flex; justify-content: center; gap: 1rem; padding: 0; }
+nav a { color: #fff; text-decoration: none; }
+footer { text-align: center; background: #1b4332; color: #fff; padding: 1rem; }
+main { padding: 1rem; }
+label { display: block; margin-bottom: 0.5rem; }
+input { width: 100%; padding: 0.4rem; margin-top: 0.2rem; }
+button { background: #40916c; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+button:hover { background: #1b4332; }
