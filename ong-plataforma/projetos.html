@@ -1,30 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projetos - ONG Esperança</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projetos — ONG Esperança</title>
+  <meta name="description" content="Projetos da ONG Esperança — voluntariado e doações">
   <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/scripts.js" defer></script>
 </head>
-<body>
-  <header>
-    <h1>Projetos Sociais</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastre-se</a></li>
-      </ul>
-    </nav>
+<body class="site-root">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="index.html">ONG Esperança</a>
+      <button id="hamburger2" class="hamburger" aria-controls="nav2" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      <nav id="nav2" class="main-nav" role="navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastre-se</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-
-  <main>
-    <h2>Projetos em Andamento</h2>
-    <p>Conheça nossos projetos sociais e participe!</p>
+  <main id="main" class="container">
+    <h2>Projetos Sociais</h2>
+    <div class="filters">
+      <label for="categoria">Categoria</label>
+      <select id="categoria">
+        <option value="">Todas</option>
+        <option value="educacao">Educação</option>
+        <option value="saude">Saúde</option>
+        <option value="capacitacao">Capacitação</option>
+      </select>
+    </div>
+    <section class="projects-grid" id="projects" aria-live="polite">
+    </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 ONG Esperança. Todos os direitos reservados.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year2"></span> ONG Esperança</p>
+    </div>
   </footer>
+  <div id="toast-container" aria-live="polite"></div>
 </body>
 </html>
