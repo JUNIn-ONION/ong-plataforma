@@ -1,6 +1,5 @@
 /* Design System: Variáveis, cores, tipografia e espaçamento */
 :root{
-  /* Paleta (mínimo 8 cores) */
   --color-primary-600: #216e4a;
   --color-primary-500: #2b8a6f;
   --color-primary-400: #4bb07f;
@@ -16,15 +15,13 @@
   --color-danger: #e11d48;
   --color-muted: #9ca3af;
 
-  /* Tipografia (mínimo 5 tamanhos) */
-  --font-size-xxl: 2.25rem; /* 36px */
-  --font-size-xl: 1.5rem;   /* 24px */
-  --font-size-lg: 1.125rem; /* 18px */
-  --font-size-md: 1rem;     /* 16px */
-  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-xxl: 2.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-lg: 1.125rem;
+  --font-size-md: 1rem;
+  --font-size-sm: 0.875rem;
   --font-family-system: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 
-  /* Espaçamento modular (8px scale) */
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;
@@ -32,7 +29,6 @@
   --space-5: 48px;
   --space-6: 64px;
 
-  /* Layout grid */
   --container-max: 1200px;
   --grid-columns: 12;
   --gutter: var(--space-2);
@@ -52,18 +48,11 @@ a{color:var(--color-primary-500);text-decoration:none}
 .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--color-primary-500),var(--color-secondary-400));display:block}
 .brand-title{font-size:var(--font-size-lg);margin:0}
 .brand-accent{color:var(--color-primary-500);font-weight:700}
-.brand-sub{margin:0;font-size:var(--font-size-sm);color:var(--color-muted)}
 
 /* Navigation */
 .main-nav{}
 .nav-list{display:flex;gap:var(--space-2);list-style:none;margin:0;padding:0;align-items:center}
-.nav-list a, .nav-list button{padding:calc(var(--space-1) / 2) var(--space-2);border-radius:8px;background:transparent;border:0;font-size:var(--font-size-sm);color:var(--color-neutral-700);cursor:pointer}
-.has-sub{position:relative}
-.sub-menu{position:absolute;left:0;top:calc(100% + 6px);background:var(--color-white);border:1px solid var(--color-neutral-300);box-shadow:0 8px 24px rgba(8,15,30,0.08);padding:var(--space-2);display:none;min-width:200px;border-radius:8px}
-.sub-menu li{margin:0}
-.has-sub:focus-within .sub-menu,.has-sub .sub-menu.open{display:block}
-
-/* Hamburger (mobile) */
+.nav-list a{padding:calc(var(--space-1) / 2) var(--space-2);border-radius:8px;background:transparent;border:0;font-size:var(--font-size-sm);color:var(--color-neutral-700);cursor:pointer}
 .hamburger{display:none;background:transparent;border:0;padding:8px;width:48px;height:48px;border-radius:8px}
 .hamburger span{display:block;height:3px;background:var(--color-neutral-700);margin:6px 0;border-radius:3px;transition:transform .25s ease}
 
@@ -97,7 +86,7 @@ form{margin-top:var(--space-3)}
 label{display:block;font-size:var(--font-size-sm);color:var(--color-neutral-700)}
 input,select{padding:.6rem;border-radius:8px;border:1px solid var(--color-neutral-300);font-size:var(--font-size-md);width:100%}
 input:focus,select:focus{outline:3px solid rgba(43,138,111,0.12);border-color:var(--color-primary-500)}
-input[aria-invalid="true"]{border-color:var(--color-danger);box-shadow:0 0 0 3px rgba(225,29,72,0.06)}
+.input-error{border-color:var(--color-danger);box-shadow:0 0 0 3px rgba(225,29,72,0.06)}
 
 /* Feedback: toast */
 #toast-container{position:fixed;right:var(--space-3);bottom:var(--space-3);display:flex;flex-direction:column;gap:var(--space-2);z-index:200}
@@ -112,21 +101,17 @@ input[aria-invalid="true"]{border-color:var(--color-danger);box-shadow:0 0 0 3px
 /* Footer */
 .site-footer{border-top:1px solid var(--color-neutral-300);padding:var(--space-3) 0;margin-top:var(--space-4)}
 
-/* Layout utilities: 12-column grid (simple helper) */
-.row{display:grid;grid-template-columns:repeat(var(--grid-columns),1fr);gap:var(--gutter)}
-
-/* Responsive breakpoints (mínimo 5) */
-@media (min-width:480px){.grid-2{grid-template-columns:1fr;}.cards{grid-template-columns:repeat(2,1fr)}}
+/* Responsive breakpoints */
+@media (min-width:480px){.grid-2{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:640px){.grid-2{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:repeat(2,1fr)}.campaign-grid{grid-template-columns:2fr 1fr}}
 @media (min-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
 @media (min-width:1100px){.container{padding:0 var(--space-4)}}
 @media (min-width:1400px){.container{max-width:1400px}}
 
-/* Accessibility tweaks */
+/* Accessibility */
 .skip-link{position:absolute;left:-999px;top:auto;background:#000;color:#fff;padding:8px;z-index:100}
 .skip-link:focus{left:1rem;top:1rem}
-.show-focus :focus{outline:3px solid rgba(43,138,111,0.18)}
 
-/* Minor helpers */
+/* utilities */
 .muted{color:var(--color-neutral-500);font-size:var(--font-size-sm)}
 .link{color:var(--color-secondary-400);font-weight:600}

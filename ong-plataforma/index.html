@@ -1,134 +1,46 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ONG Esperança — Início</title>
-  <meta name="description" content="Plataforma profissional da ONG Esperança — projetos, voluntariado e transparência">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ONG Esperança — Plataforma</title>
+  <meta name="description" content="Plataforma ONG Esperança - versão v3 (SPA local)">
   <link rel="stylesheet" href="assets/styles.css">
-  <script src="assets/scripts.js" defer></script>
 </head>
 <body class="site-root">
   <a class="skip-link" href="#main">Pular para o conteúdo</a>
-  <header class="site-header" role="banner">
+  <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <a href="index.html"><img src="assets/images/logo-placeholder.svg" alt="Logo ONG Esperança" class="logo"></a>
-        <div class="brand-text">
-          <h1 class="brand-title">ONG <span class="brand-accent">Esperança</span></h1>
-          <p class="brand-sub">Transformando comunidades</p>
-        </div>
+        <img src="assets/images/logo-placeholder.svg" alt="Logo ONG Esperança" class="logo">
+        <div class="brand-text"><h1 class="brand-title">ONG <span class="brand-accent">Esperança</span></h1></div>
       </div>
-      <button id="hamburger" class="hamburger" aria-controls="nav" aria-expanded="false" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button id="hamburger" class="hamburger" aria-controls="nav" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span><span></span></button>
       <nav id="nav" class="main-nav" role="navigation" aria-label="Navegação principal">
         <ul class="nav-list">
-          <li><a href="index.html">Início</a></li>
-          <li class="has-sub">
-            <button class="sub-toggle" aria-expanded="false">Projetos ▾</button>
-            <ul class="sub-menu">
-              <li><a href="projetos.html#educacao">Educação</a></li>
-              <li><a href="projetos.html#saude">Saúde</a></li>
-              <li><a href="projetos.html#capacitacao">Capacitação</a></li>
-            </ul>
-          </li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="cadastro.html">Cadastre-se</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#/" data-link>Início</a></li>
+          <li><a href="#/projetos" data-link>Projetos</a></li>
+          <li><a href="#/cadastro" data-link>Cadastre-se</a></li>
+          <li><a href="#/transparencia" data-link>Transparência</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <main id="main" class="container" role="main">
-    <section class="hero grid-2" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <h2 id="hero-title">Mudando histórias, uma ação por vez</h2>
-        <p class="lead">Participe como voluntário, apoie com doações e acompanhe resultados com transparência.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="projetos.html">Ver Projetos</a>
-          <a class="btn btn-ghost" href="cadastro.html">Quero Ajudar</a>
-        </div>
-      </div>
-      <figure class="hero-figure" aria-hidden="true">
-        <img src="assets/images/voluntarios.jpg" alt="Voluntários em ação" loading="lazy">
-      </figure>
-    </section>
-    <section class="system-features" aria-labelledby="features-title">
-      <h3 id="features-title">Nossos pilares</h3>
-      <div class="grid-3 cards">
-        <article class="card" tabindex="0">
-          <h4>Educação</h4>
-          <p>Programas de reforço escolar e oficinas.</p>
-          <span class="badge">200 beneficiados</span>
-        </article>
-        <article class="card" tabindex="0">
-          <h4>Saúde</h4>
-          <p>Campanhas de prevenção e atendimento.</p>
-          <span class="badge badge--secondary">Parcerias</span>
-        </article>
-        <article class="card" tabindex="0">
-          <h4>Capacitação</h4>
-          <p>Cursos profissionalizantes para jovens.</p>
-          <span class="badge">Vagas abertas</span>
-        </article>
-      </div>
-    </section>
-    <section class="highlight-campaign" aria-labelledby="campaign-title">
-      <h3 id="campaign-title">Campanha em destaque</h3>
-      <div class="campaign-grid">
-        <div class="campaign-card">
-          <img src="assets/images/campaign.jpg" alt="Campanha" loading="lazy">
-          <div class="campaign-body">
-            <h4>Reforma do Centro Comunitário</h4>
-            <p class="muted">Meta: R$ 50.000</p>
-            <progress id="camp-progress" max="50000" value="12450">24%</progress>
-            <div class="campaign-actions">
-              <a href="cadastro.html#doacao" class="btn btn-primary">Doar</a>
-              <button id="share-camp" class="btn btn-ghost">Compartilhar</button>
-            </div>
-          </div>
-        </div>
-        <div class="transparency">
-          <h4>Transparência</h4>
-          <p>Acompanhe relatórios e aplicação de recursos.</p>
-          <a class="link" href="#">Ver relatórios</a>
-        </div>
-      </div>
-    </section>
-    <section id="contato" class="contact" aria-labelledby="contact-title">
-      <h3 id="contact-title">Contato</h3>
-      <address>
-        <p>Rua Exemplo, 123 — Cidade — Estado</p>
-        <p>Email: <a href="mailto:contato@ongesperanca.org">contato@ongesperanca.org</a></p>
-        <p>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
-      </address>
-    </section>
+
+  <main id="app" class="container" role="main" tabindex="-1">
+    <!-- Conteúdo injetado pelo app.js -->
   </main>
-  <footer class="site-footer" role="contentinfo">
+
+  <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <p>&copy; <span id="year"></span> ONG Esperança</p>
-      </div>
-      <div>
-        <nav aria-label="Rodapé">
-          <ul class="footer-links">
-            <li><a href="#">Política de Privacidade</a></li>
-            <li><a href="#">Relatórios</a></li>
-          </ul>
-        </nav>
-      </div>
+      <div>&copy; <span id="year"></span> ONG Esperança</div>
+      <nav aria-label="Rodapé"><ul class="footer-links"><li><a href="#">Política de Privacidade</a></li></ul></nav>
     </div>
   </footer>
+
   <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
-  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-dialog">
-      <button class="modal-close" aria-label="Fechar">×</button>
-      <div class="modal-content">
-        <h3 id="modal-title">Obrigado!</h3>
-        <p>Recebemos sua ação (simulação).</p>
-      </div>
-    </div>
-  </div>
+  <div id="modal" class="modal" aria-hidden="true" role="dialog"><div class="modal-dialog"><button class="modal-close" aria-label="Fechar">×</button><div class="modal-content"><h3 id="modal-title"></h3><p id="modal-text"></p></div></div></div>
+
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
